@@ -1,18 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from '../styles/GameBoard.module.css';
+import ActionButtons from './ActionButtons';
 
-const GameBoard = ({ playerHand, dealerHand }) => {
-  const [playerCardCount, setPlayerCardCount] = useState(playerHand.length);
-  const [dealerCardCount, setDealerCardCount] = useState(dealerHand.length);
-
-  useEffect(() => {
-    setPlayerCardCount(playerHand.length);
-  }, [playerHand]);
-
-  useEffect(() => {
-    setDealerCardCount(dealerHand.length);
-  }, [dealerHand]);
-
+const GameBoard = ({ playerHand, dealerHand, onHit, onStand, gameOver, winner }) => {
   const getCardImage = (card) => {
     const suit = card.suit;
     const value = card.value;
@@ -21,22 +11,28 @@ const GameBoard = ({ playerHand, dealerHand }) => {
 
   return (
     <div className={styles.gameBoard}>
-      <div className={styles.hand}>
-        <h2>Dealer's Hand</h2>
-        <div className={styles.cards}>
-          {dealerHand.map((card, index) => (
-            <img key={index} src={getCardImage(card)} alt={`${card.value} of ${card.suit}`} className={styles.card} style={{ animationDelay: `${index * 0.2}s` }} />
-          ))}
+       <div className={styles.hands}>
+         <div className={styles.hand}>
+           <h2>Dealer's Hand</h2>
+           <div className={styles.cards}>
+             {dealerHand.map((card, index) => (
+               <img key={index} src={getCardImage(card)} alt={`${card.value} of ${card.suit}`} className={styles.card} style={{ animationDelay: `${index * 0.2}s` }} />
+             ))}
+           </div>
+         </div>
+         <div className={styles.hand}>
+           <h2>Player's Hand</h2>
+           <div className={styles.cards}>
+              {playerHand.map((card, index) => (
+                <img key={index} src={getCardImage(card)} alt={`${card.value} of ${card.suit}`} className={styles.card} style={{ animationDelay: `${index * 0.2}s` }} />
+              ))}
+            </div>
         </div>
-      </div>
-      <div className={styles.hand}>
-        <h2>Player's Hand</h2>
-        <div className={styles.cards}>
-          {playerHand.map((card, index) => (
-            <img key={index} src={getCardImage(card)} alt={`${card.value} of ${card.suit}`} className={styles.card} style={{ animationDelay: `${index * 0.2}s` }} />
-          ))}
-        </div>
-      </div>
+    </div>
+
+      {!gameOver && (
+        <ActionButtons onHit={onHit} onStand={onStand} />
+      )}
     </div>
   );
 };

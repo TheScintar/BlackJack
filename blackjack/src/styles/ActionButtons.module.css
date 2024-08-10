@@ -1,0 +1,30 @@
+.actionButtons {
+    display: flex;
+    justify-content: center; /* Центрирование кнопок по горизонтали */
+    align-items: center; /* Центрирование кнопок по вертикали */
+    text-align: center;
+    margin: 5%;
+}
+
+.button {
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #007bff; /* Синий цвет фона */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 10px; /* Пространство между кнопками */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тень для объема */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Темный синий при наведении */
+    transform: translateY(-3px); /* Легкое поднятие при наведении */
+}
+
+.button:active {
+    background-color: #003d82; /* Ещё более темный синий при нажатии */
+    transform: translateY(1px); /* Понижение при нажатии */
+}

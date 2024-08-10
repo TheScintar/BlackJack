@@ -1,12 +1,28 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2b2b2b;
-    color: #ffffff;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-top: 20px;
-  }
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-image: url("../../public/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.startButton {
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: #218838;
+}
