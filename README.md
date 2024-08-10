@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+<<<<<<< 
+you can see this site at the link: polite-sfogliatella-58ade3.netlify.app/
 ## Getting Started
 
 First, run the development server:
