@@ -18,6 +18,11 @@ const Home = () => {
     setGameStarted(true);
   };
 
+  const restart = () => {
+    setGameOver(false)
+    setGameStarted(false);
+  }
+
   const handleHit = () => {
     const newCard = getRandomCard();
     const newPlayerHand = [...playerHand, newCard];
@@ -46,18 +51,21 @@ const Home = () => {
         <button onClick={startGame} className="startButton">Start Game</button>
       ) : (
         <GameBoard 
-          playerHand={playerHand} 
-          dealerHand={dealerHand}
-          gameOver={gameOver}
-          winner={winner}
-          onHit={handleHit}
-          onStand={handleStand}
+            playerHand={playerHand} 
+            dealerHand={dealerHand}
+            playerHandValue={calculateHandValue(playerHand)}
+            dealerHandValue={calculateHandValue(dealerHand)}
+            gameOver={gameOver}
+            winner={winner}
+            onHit={handleHit}
+            onStand={handleStand}
         />
+
       )}
       {gameOver && (
-        <div>
+        <div className="endButton">
           <h2>{winner === 'draw' ? 'It\'s a Draw!' : `${winner} wins!`}</h2>
-          <button onClick={() => window.location.reload()}>Play Again</button>
+          <button onClick={restart} className="startButton">Play Again</button>
         </div>
       )}
     </div>

@@ -1,34 +1,44 @@
 .gameBoard {
     
-    margin-top: 30px;
+    justify-content: center;
   }
   .hands{
     display: flex;
-    justify-content: center; /* Центрирование кнопок по горизонтали */
-    align-items: center; /* Центрирование кнопок по вертикали */
+    justify-content: center; 
     text-align: center;
   }
   .hand {
-    border: 1px solid #ffffff;
-    padding: 20px;
-    background-color: #1e1e1e;
+    width: 50%;
+    padding: 2%;
     border-radius: 5px;
     text-align: center;
     margin: 0 5%;
   }
   
   .cards {
-    display: flex;
-    gap: 10px;
+    
   }
   
   .card {
-    width: 80px;
-    height: auto;
+    margin: 0 5%;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
-    transform: translateY(-10px);
     animation: fadeInCard 0.5s forwards;
+  }
+
+  .score {
+    font-size: 18px; 
+    font-weight: bold;  
+    color: #ffffff;  
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+    text-align: center;  
+    margin-top: 10px;  
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 5px 10px;  
+    border-radius: 8px; 
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
   }
   
   @keyframes fadeInCard {

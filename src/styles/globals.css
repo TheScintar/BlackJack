@@ -13,6 +13,7 @@ h1 {
 }
 
 .startButton {
+
   padding: 10px 20px;
   font-size: 24px;
   cursor: pointer;
@@ -25,4 +26,13 @@ h1 {
 
 .startButton:hover {
   background-color: #218838;
+   
+  text-align: center;
+  
+}
+
+.endButton{
+    
+    text-align: center;
+    margin: 5%;
 }
