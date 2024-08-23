@@ -22,4 +22,4 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 ## BlackJack
 React & Next
 
-![BlackJack screen](https://github.com/TheScintar/BlackJack/blob/main/image.png)
+![BlackJack screen](https://github.com/TheScintar/BlackJack/blob/main/image.jpg)
