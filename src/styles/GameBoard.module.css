@@ -13,6 +13,7 @@
     border-radius: 5px;
     text-align: center;
     margin: 0 5%;
+    
   }
   
   .cards {
@@ -24,6 +25,7 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
     animation: fadeInCard 0.5s forwards;
+    box-shadow: 10px 5px 20px black;
   }
 
   .score {
@@ -39,6 +41,7 @@
     width: fit-content; 
     margin-left: auto;
     margin-right: auto;
+    
   }
   
   @keyframes fadeInCard {
